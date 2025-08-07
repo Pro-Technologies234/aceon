@@ -8,7 +8,7 @@ import { Navbar } from "@/components/shared/navbar";
 import { Button } from "@/components/ui/button";
 import SmoothScrollWrapper from "@/components/scroll-wrap";
 // import { ScrollLockScaling } from "@/components/shared/animated-scaled-text";
-import { circIn, circInOut, easeIn, motion } from "motion/react";
+import { circIn, circInOut, motion } from "motion/react";
 import { ArrowDown } from "lucide-react";
 import tennis_showcase from '@/assets/images/tennis_showcase.png'
 

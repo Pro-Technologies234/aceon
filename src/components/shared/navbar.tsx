@@ -1,4 +1,4 @@
-import { ArrowRight, Ellipsis, EllipsisVertical } from "lucide-react";
+import { ArrowRight, Ellipsis } from "lucide-react";
 import { Button } from "../ui/button";
 
 export function Navbar() {
@@ -9,7 +9,7 @@ export function Navbar() {
                 <div className="flex gap-4 items-center" >
                     <Button size={'lg'} className=" uppercase rounded-full bg-gray-900 hover:bg-blue-700 text-white  cursor-pointer" >
                         <ArrowRight/>
-                        Let's Talk
+                        Let&apos;s Talk
                     </Button>
                     <Button size={'lg'} className="group uppercase text-black rounded-full bg-white hover:bg-white cursor-pointer" >
                          Menu
