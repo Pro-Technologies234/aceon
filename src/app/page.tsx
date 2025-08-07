@@ -1,103 +1,242 @@
+'use client'
+
 import Image from "next/image";
+import hereo_bg from '@/assets/images/hero_bg.png'
+import tennis_player from '@/assets/images/tennis_player.jpg'
+import tennis_shot from '@/assets/images/15956.jpg'
+import { Navbar } from "@/components/shared/navbar";
+import { Button } from "@/components/ui/button";
+import SmoothScrollWrapper from "@/components/scroll-wrap";
+import { ScrollLockScaling } from "@/components/shared/animated-scaled-text";
+import { circIn, circInOut, easeIn, motion } from "motion/react";
+import { ArrowDown } from "lucide-react";
+import tennis_showcase from '@/assets/images/tennis_showcase.png'
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <SmoothScrollWrapper>
+      <Navbar />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <section className="relative overflow-hidden   w-full h-dvh">
+        {/* Background Image Layer */}
+        <div className="absolute inset-0 -z-10">
+          <Image src={hereo_bg} alt="hero_bg" className="object-cover contrast-110 saturate-110 w-full h-full" />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        {/* Gradient Overlay + Main Content */}
+        <div className="absolute inset-0 bg-gradient-to-t from-cyan-700/25 to-cyan-500/5">
+          <div className="py-10 h-dvh flex font-cabinet-grotesk flex-col justify-end text-white w-full max-w-7xl mx-auto">
+            <div className="overflow-hidden" >
+              <motion.h1
+                initial={{y: 100}}
+                animate={{y: 0}}
+                transition={{duration: 1}}
+                 className="text-5xl w-xl selection:bg-lime-200 selection:text-black">
+                The Perfect Tennis Ball for
+              </motion.h1>
+              </div>
+            <div className="overflow-hidden" >
+              <motion.h1
+                initial={{y: 100}}
+                animate={{y: 0}}
+                transition={{duration: 1}}
+                 className="text-5xl w-xl selection:bg-lime-200 selection:text-black">
+                 Every Match.
+              </motion.h1>
+            </div>
+            <p className="w-md text-sm font-light mt-2">
+              Aceon Balls are trusted by players of all levels, from casual enthusiasts to tournament champions.
+            </p>
+            <div className="space-x-4 mt-4">
+              <Button size="lg" className="rounded-full bg-gray-900 hover:bg-blue-700 text-white">
+                SHOP NOW
+              </Button>
+              <Button size="lg" className="rounded-full bg-gray-900/10 hover:bg-gray-900/50 backdrop-blur-sm text-white">
+                LEARN MORE
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="group w-full h-dvh bg-black/50 hover:bg-black/20 transition-all duration-500  overflow-hidden relative " >
+        <motion.div className='absolute overflow-hidden -z-20 inset-0'
+          initial={{ opacity: 0, scale: 4 }}
+          whileInView={{ opacity: 1, scale: 1 }} 
+          transition={{duration:2,delay:.2}}
+          >
+          <Image src={tennis_shot} alt="tennis_player.png" className="object-cover group-hover:grayscale-0 transition-all duration-500 grayscale w-full h-full" />
+        </motion.div>
+        <div className="flex justify-center h-full items-center max-w-7xl m-auto" >
+          <motion.h2 
+            initial={{ opacity: 0.5, scale: 0.5 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{duration:1,delay:.2}}
+            className="text-7xl w-5xl leading-tight text-center selection:bg-lime-200 selection:text-black text-white uppercase font-light">
+            {/* Performance. Precision. Power. Play. */}
+            {/* Strike Every Ball With Relentless Focus */}
+            Push Beyond Your Limits. Every Swing, Every Bounce, Every Win.
+          </motion.h2>
+        </div>
+
+      </section>
+       {/* <ScrollLockScaling/>
+      <section className="grid grid-cols-2 gap-4 h-dvh w-full  mx-auto">
+        <div className="flex items-center" >
+          <div className="w-full h-[80dvh] rounded-tr-4xl rounded-br-[10rem] relative overflow-hidden" >
+            <Image src={tennis_player} alt="tennis_player.png" className="object-cover contrast-125 saturate-150 w-full h-full" />
+          </div>
+        </div>
+        <div className="py-10 h-full relative flex font-cabinet-grotesk flex-col justify-center text-white">
+            <h2 className="text-5xl w-2xl selection:bg-lime-200 selection:text-black">
+              Engineered for durability, precision bounce, and championship-level performance.
+            </h2>
+        </div>
+      </section> */}
+      <section className="" >
+        <div className="  h-dvh flex flex-col justify-center items-center  max-w-7xl w-full m-auto" >
+            <h2 className="text-5xl leading-0" >ABOUT</h2>
+            <motion.h2 
+              initial={{y:200}}
+              whileInView={{y:0}}
+              transition={{duration:1, ease: circInOut}}
+              className="text-[25em] leading-tight font-medium">
+              <motion.span
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 0.1 }}
+              >
+                A
+              </motion.span>
+              <motion.span
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 0.3 }}
+              >
+                C
+              </motion.span>
+              <motion.span
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 0.5 }}
+              >
+                E
+              </motion.span>
+              <motion.span
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 0.7 }}
+              >
+                O
+              </motion.span>
+              <motion.span
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 0.9 }}
+              >
+                N
+              </motion.span>
+            </motion.h2>
+            <Button size="lg" className="rounded-full bg-gray-50 hover:bg-blue-700 text-black hover:text-white shadow-blue-300 shadow-2xl">
+              <ArrowDown/>CONTINUE SCROLLING <ArrowDown/>
+            </Button>
+        </div>
+        <div className="grid grid-cols-2 py-20 h-dvh   max-w-7xl w-full m-auto" >
+          <div className="flex items-start" >
+            <motion.h3
+              initial={{x: 400}}
+              whileInView={{x: 0}}
+              transition={{duration: 1, ease: circIn}}
+              className="text-5xl font-medium selection:bg-lime-200 selection:text-black" >
+              Aceon is dedicated to creating premium-quality tennis balls that deliver unmatched consistency and feel on the court.
+            </motion.h3>
+          </div>
+          <div className="flex items-end" >
+            <motion.h3
+              initial={{x: -400}}
+              whileInView={{x: 0}}
+              transition={{duration: 1, ease: circIn}}
+              className="text-5xl text-right font-medium selection:bg-lime-200 selection:text-black" >
+              Whether you're practicing serves or battling it out in a final set, our balls are designed to keep up with your game.
+            </motion.h3>
+          </div>
+        </div>
+        <div>
+
+        </div>
+      <div className="flex justify-center items-center max-w-[90vw] h-[75dvh] rounded-4xl overflow-hidden relative py-50 text-white   w-full m-auto" >
+        <div className="absolute inset-0  bg-black -z-1" >
+          <video src="/videos/tennis_ball_fall.mp4" autoPlay playsInline loop muted className="object-cover saturate-150 w-full opacity-20 h-full" ></video>
+        </div>
+          <h3 className="text-3xl text-center w-3xl uppercase  selection:bg-lime-200 selection:text-black " >
+            With years of research and collaboration with professional athletes, Aceon Balls are crafted to meet the highest standards of performance and sustainability.
+          </h3>
+      </div>
+      </section>
+      <div>
+<div className="relative h-[300vh]">
+  {/* Sticky Section */}
+  <section className="sticky top-0 h-dvh z-1 bg-white grid grid-cols-2 w-full">
+    <div className="flex flex-col items-end">
+      <div className="p-20">
+        <h2 className="text-4xl font-black">Why Choose Aceon Balls?</h2>
+        <ul className="list-disc ml-4 text-justify">
+          <li>Tournament-Grade Quality: Designed to meet ITF standards for official matches.</li>
+          <li>Enhanced Durability: Lasts longer with superior felt and pressurized core.</li>
+          <li>Consistent Bounce: Optimized for all court surfaces — clay, grass, and hard court.</li>
+          <li>Eco-Conscious: Made with 40% recycled materials without compromising performance.</li>
+        </ul>
+      </div>
     </div>
+    <div className="overflow-hidden shadow-2xl shadow-rose-200">
+      <Image
+        src={tennis_showcase}
+        alt="tennis_showcase.png"
+        className="object-cover w-full h-full"
+      />
+    </div>
+  </section>
+
+  {/* Footer Scrolls Over */}
+  <footer className="absolute top-0 w-full h-[300vh] z-10">
+    <div className="h-[200vh]" /> spacer to allow section to stay sticky
+    <div className="h-dvh bg-zinc-900 text-white flex items-center justify-center">
+      <p className="text-3xl font-bold">Footer Content Appears Over</p>
+    </div>
+  </footer>
+</div>
+
+      {/* <section className=" bg-white h-auto grid grid-cols-2 w-full m-auto" >
+        <div className="flex flex-col items-end" >
+          <div className="p-20" >
+            <h2 className="text-4xl font-black" >Why Choose Aceon Balls?</h2>
+            <ul className="list-disc ml-4 text-justify" >
+              <li>Tournament-Grade Quality: Designed to meet ITF standards for official matches.
+              </li>
+              <li>
+                  Enhanced Durability: Lasts longer with superior felt and pressurized core.
+              </li>
+              <li>
+                  Consistent Bounce: Optimized for all court surfaces — clay, grass, and hard court.
+              </li>
+              <li>
+                  Eco-Conscious: Made with 40% recycled materials without compromising performance.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="overflow-hidden shadow-2xl shadow-rose-200" >
+          <Image src={tennis_showcase} alt="tennis_showcase.png" className="object-cover  w-full h-full" />
+        </div>
+        <footer className="w-full  z-1" >
+          <div className="h-dvh bg-zinc-50 " >
+            
+          </div>
+          <div className="h-100 bg-zinc-900 " >
+            
+          </div>
+        </footer>
+      </section> */}
+      </div>
+
+    </SmoothScrollWrapper>
   );
 }
