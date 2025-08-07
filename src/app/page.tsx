@@ -2,12 +2,12 @@
 
 import Image from "next/image";
 import hereo_bg from '@/assets/images/hero_bg.png'
-import tennis_player from '@/assets/images/tennis_player.jpg'
+// import tennis_player from '@/assets/images/tennis_player.jpg'
 import tennis_shot from '@/assets/images/15956.jpg'
 import { Navbar } from "@/components/shared/navbar";
 import { Button } from "@/components/ui/button";
 import SmoothScrollWrapper from "@/components/scroll-wrap";
-import { ScrollLockScaling } from "@/components/shared/animated-scaled-text";
+// import { ScrollLockScaling } from "@/components/shared/animated-scaled-text";
 import { circIn, circInOut, easeIn, motion } from "motion/react";
 import { ArrowDown } from "lucide-react";
 import tennis_showcase from '@/assets/images/tennis_showcase.png'
