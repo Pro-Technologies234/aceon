@@ -155,7 +155,7 @@ export default function Home() {
               whileInView={{x: 0}}
               transition={{duration: 1, ease: circIn}}
               className="text-5xl text-right font-medium selection:bg-lime-200 selection:text-black" >
-              Whether you're practicing serves or battling it out in a final set, our balls are designed to keep up with your game.
+              Whether you&apos;re practicing serves or battling it out in a final set, our balls are designed to keep up with your game.
             </motion.h3>
           </div>
         </div>
