@@ -145,9 +145,9 @@ export default function Home() {
         </div>
         <div className="grid not-md:grid-rows-2 md:grid-cols-2 py-20 h-dvh not-md:px-2  max-w-7xl w-full m-auto" >
           <motion.div
-              initial={{x: 400}}
-              whileInView={{x: 0}}
-              transition={{duration: 1, ease: circIn}}
+              // initial={{x: 400}}
+              // whileInView={{x: 0}}
+              // transition={{duration: 1, ease: circIn}}
            className="flex items-start" >
             <h3
               className="text-3xl md:text-5xl font-medium selection:bg-lime-200 selection:text-black" >
@@ -155,9 +155,9 @@ export default function Home() {
             </h3>
           </motion.div>
           <motion.div
-              initial={{x: -400}}
-              whileInView={{x: 0}}
-              transition={{duration: 1, ease: circIn}}
+              // initial={{x: -400}}
+              // whileInView={{x: 0}}
+              // transition={{duration: 1, ease: circIn}}
            className="flex items-end" >
             <h3
               className="text-3xl md:text-5xl text-right font-medium selection:bg-lime-200 selection:text-black" >
