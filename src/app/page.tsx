@@ -34,7 +34,7 @@ export default function Home() {
                 initial={{y: 100}}
                 animate={{y: 0}}
                 transition={{duration: 1}}
-                 className="text-3xl md:text-5xl w-xl selection:bg-lime-200 selection:text-black">
+                 className="text-3xl md:text-5xl md:w-xl selection:bg-lime-200 selection:text-black">
                 The Perfect Tennis Ball for
               </motion.h1>
               </div>
@@ -43,11 +43,11 @@ export default function Home() {
                 initial={{y: 100}}
                 animate={{y: 0}}
                 transition={{duration: 1}}
-                 className="text-3xl md:text-5xl w-xl selection:bg-lime-200 selection:text-black">
+                 className="text-3xl md:text-5xl md:w-xl selection:bg-lime-200 selection:text-black">
                  Every Match.
               </motion.h1>
             </div>
-            <p className="w-sm md:w-md text-xs md:text-sm font-light mt-2">
+            <p className=" md:w-md text-xs md:text-sm font-light mt-2">
               Aceon Balls are trusted by players of all levels, from casual enthusiasts to tournament champions.
             </p>
             <div className="space-x-4 mt-4">
@@ -74,7 +74,7 @@ export default function Home() {
             initial={{ opacity: 0.5, scale: 0.5 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{duration:1,delay:.2}}
-            className="text-4xl md:text-7xl w-5xl leading-tight text-center selection:bg-lime-200 selection:text-black text-white uppercase font-light">
+            className="text-4xl md:text-7xl md:w-5xl leading-tight text-center selection:bg-lime-200 selection:text-black text-white uppercase font-light">
             {/* Performance. Precision. Power. Play. */}
             {/* Strike Every Ball With Relentless Focus */}
             Push Beyond Your Limits. Every Swing, Every Bounce, Every Win.
@@ -238,7 +238,7 @@ export default function Home() {
             </div>
           </div>
       <span className="not-md:max-w-55 text-xs md:text-sm text-center" >Contact us or explore our collection of high-performance tennis balls.</span>
-      <h2 className="text-6xl md:text-9xl capitalize tracking-wider font-medium text-white w-xs md:w-2xl text-center" >
+      <h2 className="text-6xl md:text-9xl capitalize tracking-wider font-medium text-white md:w-2xl text-center" >
         <span className="group relative " >
           Let&apos;s work
           <motion.div 
@@ -319,7 +319,7 @@ export default function Home() {
         </div>
       </div>
       <div className="h-[50dvh] bg-zinc-900 text-white flex flex-col not-md:items-center px-4 justify-between py-10">
-        <p className="text-8xl font-light leading-tight w-2xl">ACEON TENNIS BALLS</p>
+        <p className="text-4xl md:text-8xl font-light leading-tight md:w-2xl">ACEON TENNIS BALLS</p>
         <div className='w-full flex justify-between text-white' >  
           <Plus className=" animate-respin" />
           <Plus className=" animate-respin" />
