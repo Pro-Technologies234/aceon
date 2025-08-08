@@ -144,24 +144,26 @@ export default function Home() {
             </Button>
         </div>
         <div className="grid not-md:grid-rows-2 md:grid-cols-2 py-20 h-dvh not-md:px-2  max-w-7xl w-full m-auto" >
-          <div className="flex items-start" >
-            <motion.h3
+          <motion.div
               initial={{x: 400}}
               whileInView={{x: 0}}
               transition={{duration: 1, ease: circIn}}
+           className="flex items-start" >
+            <h3
               className="text-3xl md:text-5xl font-medium selection:bg-lime-200 selection:text-black" >
               Aceon is dedicated to creating premium-quality tennis balls that deliver unmatched consistency and feel on the court.
-            </motion.h3>
-          </div>
-          <div className="flex items-end" >
-            <motion.h3
+            </h3>
+          </motion.div>
+          <motion.div
               initial={{x: -400}}
               whileInView={{x: 0}}
               transition={{duration: 1, ease: circIn}}
+           className="flex items-end" >
+            <h3
               className="text-3xl md:text-5xl text-right font-medium selection:bg-lime-200 selection:text-black" >
               Whether you&apos;re practicing serves or battling it out in a final set, our balls are designed to keep up with your game.
-            </motion.h3>
-          </div>
+            </h3>
+          </motion.div>
         </div>
         <div>
 
