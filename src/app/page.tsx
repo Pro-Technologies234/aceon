@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import SmoothScrollWrapper from "@/components/scroll-wrap";
 // import { ScrollLockScaling } from "@/components/shared/animated-scaled-text";
 import { circIn, circInOut, easeInOut, motion } from "motion/react";
-import { ArrowDown, ArrowRight, ArrowUp, Plus, Sparkle } from "lucide-react";
+import { ArrowDown, ArrowRight, ArrowUp, Plus } from "lucide-react";
 import tennis_racket from '@/assets/images/tennis_racket.jpg'
 import tennis_strike from '@/assets/images/tennis_strike.jpg'
 import tennis_player_girl from '@/assets/images/tennis_player_girl.jpg'
