@@ -40,6 +40,9 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --animate-respin: respin 1.5s ease-in-out infinite;
+  --animate-arrow-slide-down: arrow-slide-down 1.8s ease-in-out infinite;
+  --animate-text-slide-down: text-slide-down 1.8s ease-in-out infinite;
 }
 
 :root {
@@ -120,3 +123,46 @@
   }
 }
 
+@keyframes respin {
+  0% {
+    transform: rotate(0deg);
+  };
+  10% {
+    transform: rotate(90deg);
+  };
+  90% {
+    transform: rotate(90deg);
+  };
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes arrow-slide-down {
+  0% {
+    transform: translateY(0px);
+  };
+  20% {
+    transform: translateY(-50px);
+  };
+  80% {
+    transform: translateY(-50px);
+  };
+  100% {
+    transform: translateY(-50px);
+  };
+}
+@keyframes text-slide-down {
+  0% {
+    transform: translateY(0px);
+  };
+  20% {
+    transform: translateY(-127px);
+  };
+  80% {
+    transform: translateY(-127px);
+  };
+  100% {
+    transform: translateY(-127px);
+  };
+}
