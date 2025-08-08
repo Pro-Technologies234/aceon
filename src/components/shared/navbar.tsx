@@ -8,7 +8,7 @@ export function Navbar() {
             <div className="max-w-7xl  w-full flex justify-between m-auto" >
                 <h1 className="text-4xl text-white" >ACEON</h1>
                 <div className="flex gap-4 items-center" >
-                    <Button size={'lg'} className=" uppercase rounded-full bg-gray-900 hover:bg-blue-700 text-white  cursor-pointer" >
+                    <Button size={'lg'} className=" uppercase not-md:hidden rounded-full bg-gray-900 hover:bg-blue-700 text-white  cursor-pointer" >
                         <ArrowRight/>
                         Let&apos;s Talk
                     </Button>

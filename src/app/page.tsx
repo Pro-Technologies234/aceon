@@ -95,7 +95,7 @@ export default function Home() {
             </h2>
         </div>
       </section> */}
-      <section className="" >
+      <section className="overflow-x-hidden" >
         <div className="  h-dvh flex flex-col py-20 justify-between md:justify-center items-center  max-w-7xl w-full m-auto" >
             <h2 className="text-2xl md:text-5xl leading-0" >ABOUT US</h2>
             <motion.h2 
