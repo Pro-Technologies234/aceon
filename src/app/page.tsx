@@ -8,9 +8,13 @@ import { Navbar } from "@/components/shared/navbar";
 import { Button } from "@/components/ui/button";
 import SmoothScrollWrapper from "@/components/scroll-wrap";
 // import { ScrollLockScaling } from "@/components/shared/animated-scaled-text";
-import { circIn, circInOut, motion } from "motion/react";
-import { ArrowDown } from "lucide-react";
-import tennis_showcase from '@/assets/images/tennis_showcase.png'
+import { circIn, circInOut, easeInOut, motion } from "motion/react";
+import { ArrowDown, ArrowRight, ArrowUp, Plus, Sparkle } from "lucide-react";
+import tennis_racket from '@/assets/images/tennis_racket.jpg'
+import tennis_strike from '@/assets/images/tennis_strike.jpg'
+import tennis_player_girl from '@/assets/images/tennis_player_girl.jpg'
+// import tennis_showcase from '@/assets/images/tennis_showcase.png'
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -93,7 +97,7 @@ export default function Home() {
       </section> */}
       <section className="" >
         <div className="  h-dvh flex flex-col justify-center items-center  max-w-7xl w-full m-auto" >
-            <h2 className="text-5xl leading-0" >ABOUT</h2>
+            <h2 className="text-5xl leading-0" >ABOUT US</h2>
             <motion.h2 
               initial={{y:200}}
               whileInView={{y:0}}
@@ -172,9 +176,42 @@ export default function Home() {
       </div>
       </section>
       <div>
-<div className="relative h-[300vh]">
-  {/* Sticky Section */}
-  <section className="sticky top-0 h-dvh z-1 bg-white grid grid-cols-2 w-full">
+  <section className=" h-dvh z-1  grid grid-cols-2 items-center max-w-7xl py-20 m-auto w-full">
+    <div className="grid grid-rows-5 gap-2 w-150 h-full  " >
+      <div className="overflow-hidden row-span-3 relative rounded-3xl ">
+        <Image
+          src={tennis_racket}
+          alt="tennis_racket.jpg"
+          className="object-cover w-full h-full"
+        />
+          <Button size={'icon'} className="absolute bottom-4 right-4 rounded-full bg-white hover:bg-white  text-black"  >
+            <Plus/>
+          </Button>
+      </div>
+      <div className="grid grid-cols-2 row-span-2 gap-2" >        
+        <div className="overflow-hidden relative rounded-3xl ">
+          <Button size={'icon'} className="absolute bottom-4 right-4 rounded-full bg-white hover:bg-white  text-black"  >
+            <Plus/>
+          </Button>
+          <Image
+            src={tennis_player_girl}
+            alt="tennis_racket.jpg"
+            className="object-cover w-full h-full"
+          />
+        </div>
+        
+        <div className="overflow-hidden relative rounded-3xl ">
+          <Button size={'icon'} className="absolute bottom-4 right-4 rounded-full bg-white hover:bg-white  text-black"  >
+            <Plus/>
+          </Button>
+          <Image
+            src={tennis_strike}
+            alt="tennis_racket.jpg"
+            className="object-cover w-full h-full"
+          />
+        </div>
+      </div>
+    </div>
     <div className="flex flex-col items-end">
       <div className="p-20">
         <h2 className="text-4xl font-black">Why Choose Aceon Balls?</h2>
@@ -186,23 +223,109 @@ export default function Home() {
         </ul>
       </div>
     </div>
-    <div className="overflow-hidden shadow-2xl shadow-rose-200">
-      <Image
-        src={tennis_showcase}
-        alt="tennis_showcase.png"
-        className="object-cover w-full h-full"
-      />
-    </div>
   </section>
+  <div className="relative h-[300vh]">
+    {/* Sticky Section */}
+    <div className="sticky top-0 flex z-1 flex-col justify-center text-white items-center bg-black h-dvh w-full " >
+      <Plus className="absolute left-80 top-20" />
+      <Plus className="absolute right-80 top-20" />
+      <Plus className="absolute left-80 bottom-20" />
+      <Plus className="absolute right-80 bottom-20" />
+          <div className="absolute inset-0  bg-black -z-1" >
+            <video src="/videos/tennis_ball_roll.mp4" autoPlay playsInline loop muted className="object-cover saturate-150 contrast-115 w-full   h-full" ></video>
+            <div className="absolute inset-0 bg-black/50 " >
 
-  {/* Footer Scrolls Over */}
-  <footer className="absolute top-0 w-full h-[300vh] z-10">
-    <div className="h-[200vh]" /> spacer to allow section to stay sticky
-    <div className="h-dvh bg-zinc-900 text-white flex items-center justify-center">
-      <p className="text-3xl font-bold">Footer Content Appears Over</p>
+            </div>
+          </div>
+      <span className="" >Contact us or explore our collection of high-performance tennis balls.</span>
+      <h2 className="text-9xl capitalize tracking-wider font-medium text-white w-2xl text-center" >
+        <span className="group relative " >
+          Let&apos;s work
+          <motion.div 
+            initial={{width:0}}
+            whileInView={{width:650}}
+            transition={{duration:.1, delay:0.1, ease:easeInOut}}
+            className="absolute left-2 bottom-2 w-full bg-white h-2 transition-all ease-out duration-300 " >
+          </motion.div>
+        </span  > 
+        <span className="group relative " >
+          together!
+          <motion.div 
+            initial={{width:0}}
+            whileInView={{width:130}}
+            transition={{duration:.1, delay:0.2, ease:easeInOut}}
+            className="absolute left-0 bottom-4 w-full bg-white h-2 transition-all ease-out duration-300 " >
+          </motion.div>
+          <motion.div 
+            initial={{width:0}}
+            whileInView={{width:400}}
+            transition={{duration:.1, delay:0.4, ease:easeInOut}}
+            className="absolute left-55 bottom-4 w-full bg-white h-2 transition-all ease-out duration-300 " >
+          </motion.div>
+        </span  > 
+        </h2>
+        <Button size="lg" className="rounded-full z-1 bg-gray-50 p-6 px-8 hover:bg-blue-700 absolute bottom-8 text-black hover:text-white  ">
+          <ArrowDown/>CONTINUE SCROLLING <ArrowDown/>
+        </Button>
     </div>
-  </footer>
-</div>
+
+    {/* Footer Scrolls Over */}
+    <footer className="absolute top-0 z-1 w-full h-[300vh] selection:bg-lime-200 selection:text-black">
+      <div className="h-[150vh] -z-10" /> spacer to allow section to stay sticky
+      <div className="h-dvh bg-white" >
+        <div className="max-w-7xl h-full w-full m-auto items-center z-10 grid grid-cols-6">
+          <div className="flex flex-col h-full col-span-2 p-10 justify-end" >
+            <h3>© 2025 Aceon Balls. All Rights Reserved.</h3>
+            <h3>Terms & Conditions | Privacy Policy</h3>
+          </div>
+          <div  className="font-medium" >
+            <div className="flex flex-col gap-4 text-xl" >
+              <Link href='#twitter' >
+                Twitter / X
+              </Link>
+              <Link href='#twitter' >
+                Instagram
+              </Link>
+              <Link href='#twitter' >
+                Linkedin
+              </Link>
+            </div>
+            <div className="flex flex-col mt-20 text-xl" >
+              <span>General Enquiries</span>
+              <Link href={'#aceon@gmail.com'} className="group relative" >
+                aceon@gmail.com
+                <div className="absolute -bottom-1 w-0  bg-black h-0.5 transition-all ease-out duration-300 group-hover:w-[80%]" >
+                </div>
+              </Link>
+            </div>
+          </div>
+          <div className="col-span-3 h-full py-6 justify-between flex flex-col" >
+            <div className="h-10" >
+
+            </div>
+            <div>
+              <h3 className="text-5xl font-medium " >Subscribe to <br /> our newsletter</h3>
+              <div className="bg-gray-200 w-md mt-8 rounded-2xl flex items-center p-2 px-4" >
+                <input type="email" name="" id="" placeholder="Enter Your Email" className="p-2 text-lg focus:outline-none w-full"  />
+                <ArrowRight/>
+              </div>
+            </div>
+            <div className="justify-self-end flex items-center  justify-between " > 
+              <span>
+                Built by Poye Kitoye with 💖
+              </span>
+              <Button size={'icon'} className="p-7 rounded-full bg-black cursor-pointer hover:bg-black text-white" >
+                <ArrowUp/>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="h-80 bg-zinc-900 text-white flex items-center justify-center">
+        <p className="text-3xl font-bold">Footer Content Appears Over</p>
+      </div>
+    </footer>
+  </div>
 
       {/* <section className=" bg-white h-auto grid grid-cols-2 w-full m-auto" >
         <div className="flex flex-col items-end" >

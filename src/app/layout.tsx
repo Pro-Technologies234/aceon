@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${cabinetGrotesk.variable} bg-gray-100 font-cabinet-grotesk overflow-x-hidden antialiased`}
+        className={`${cabinetGrotesk.variable} bg-gray-100 selection:bg-lime-200 selection:text-black font-cabinet-grotesk overflow-x-hidden antialiased`}
       >
         {children}
       </body>
