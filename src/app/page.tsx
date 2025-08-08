@@ -256,13 +256,13 @@ export default function Home() {
             initial={{width:0}}
             whileInView={{width:130}}
             transition={{duration:.1, delay:0.2, ease:easeInOut}}
-            className="absolute left-0 bottom-1 not-md:max-w-15 md:bottom-4 w-full bg-white h-0.5 md:h-2 transition-all ease-out duration-300 " >
+            className="absolute left-0 bottom-2 not-md:max-w-15 md:bottom-4 w-full bg-white h-0.5 md:h-2 transition-all ease-out duration-300 " >
           </motion.div>
           <motion.div 
             initial={{width:0}}
             whileInView={{width:400}}
             transition={{duration:.1, delay:0.4, ease:easeInOut}}
-            className="absolute left-25 md:left-55 bottom-1 not-md:max-w-42 md:bottom-4 w-full bg-white h-0.5 md:h-2 transition-all ease-out duration-300 " >
+            className="absolute left-25 md:left-55 bottom-2 not-md:max-w-42 md:bottom-4 w-full bg-white h-0.5 md:h-2 transition-all ease-out duration-300 " >
           </motion.div>
         </span  > 
         </h2>
