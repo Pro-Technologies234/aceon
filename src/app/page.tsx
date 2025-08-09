@@ -21,7 +21,7 @@ export default function Home() {
     <SmoothScrollWrapper>
       <Navbar />
 
-      <section className="relative overflow-hidden   w-full h-dvh">
+      <section id='home' className="relative overflow-hidden   w-full h-dvh">
         {/* Background Image Layer */}
         <div className="absolute inset-0 -z-10">
           <Image src={hereo_bg} alt="hero_bg" className="object-cover contrast-110 saturate-110 w-full h-full" />
@@ -82,20 +82,7 @@ export default function Home() {
         </div>
 
       </section>
-       {/* <ScrollLockScaling/>
-      <section className="grid grid-cols-2 gap-4 h-dvh w-full  mx-auto">
-        <div className="flex items-center" >
-          <div className="w-full h-[80dvh] rounded-tr-4xl rounded-br-[10rem] relative overflow-hidden" >
-            <Image src={tennis_player} alt="tennis_player.png" className="object-cover contrast-125 saturate-150 w-full h-full" />
-          </div>
-        </div>
-        <div className="py-10 h-full relative flex font-cabinet-grotesk flex-col justify-center text-white">
-            <h2 className="text-5xl w-2xl selection:bg-lime-200 selection:text-black">
-              Engineered for durability, precision bounce, and championship-level performance.
-            </h2>
-        </div>
-      </section> */}
-      <section className="overflow-x-hidden" >
+      <section id='about_us' className="overflow-x-hidden" >
         <div className="  h-dvh flex flex-col py-20 justify-between md:justify-center items-center  max-w-7xl w-full m-auto" >
             <h2 className="text-2xl md:text-5xl leading-0" >ABOUT US</h2>
             <motion.h2 
@@ -178,7 +165,7 @@ export default function Home() {
       </div>
       </section>
       <div>
-  <section className=" h-[150dvh] md:h-dvh z-1 py-2 grid not-md:grid-rows-2 md:grid-cols-2 items-center max-w-7xl not-md:px-2  m-auto w-full">
+  <section id='why_choose_us' className=" h-[150dvh] md:h-dvh z-1 py-2 grid not-md:grid-rows-2 md:grid-cols-2 items-center max-w-7xl not-md:px-2  m-auto w-full">
     <div className="grid grid-rows-5 gap-2 md:w-150 h-120   " >
       <div className="group overflow-hidden row-span-3 relative rounded-xl md:rounded-3xl ">
         <Image
@@ -228,7 +215,7 @@ export default function Home() {
   </section>
   <div className="relative h-[300vh]">
     {/* Sticky Section */}
-    <div className="sticky top-0 flex z-1 flex-col justify-center text-white items-center bg-black h-dvh w-full " >
+    <section id='contact' className="sticky top-0 flex z-1 flex-col justify-center text-white items-center bg-black h-dvh w-full " >
       <Plus className="absolute left-8 md:left-40 lg:left-80 top-20 animate-respin" />
       <Plus className="absolute right-8 md:right-40 lg:right-80 top-20 animate-respin" />
       <Plus className="absolute left-8 md:left-40 lg:left-80 bottom-20 animate-respin" />
@@ -269,7 +256,7 @@ export default function Home() {
         <Button size="lg" className="rounded-full z-1 bg-gray-50 p-6 px-8 hover:bg-blue-700 absolute bottom-8 text-black hover:text-white  ">
           <ArrowDown/>CONTINUE SCROLLING <ArrowDown/>
         </Button>
-    </div>
+    </section>
 
     {/* Footer Scrolls Over */}
     <footer className="absolute top-0 z-1 w-full h-[300vh] selection:bg-lime-200 selection:text-black">
@@ -331,40 +318,8 @@ export default function Home() {
       </div>
     </footer>
 
+    </div>
   </div>
-
-      {/* <section className=" bg-white h-auto grid grid-cols-2 w-full m-auto" >
-        <div className="flex flex-col items-end" >
-          <div className="p-20" >
-            <h2 className="text-4xl font-black" >Why Choose Aceon Balls?</h2>
-            <ul className="list-disc ml-4 text-justify" >
-              <li>Tournament-Grade Quality: Designed to meet ITF standards for official matches.
-              </li>
-              <li>
-                  Enhanced Durability: Lasts longer with superior felt and pressurized core.
-              </li>
-              <li>
-                  Consistent Bounce: Optimized for all court surfaces — clay, grass, and hard court.
-              </li>
-              <li>
-                  Eco-Conscious: Made with 40% recycled materials without compromising performance.
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="overflow-hidden shadow-2xl shadow-rose-200" >
-          <Image src={tennis_showcase} alt="tennis_showcase.png" className="object-cover  w-full h-full" />
-        </div>
-        <footer className="w-full  z-1" >
-          <div className="h-dvh bg-zinc-50 " >
-            
-          </div>
-          <div className="h-100 bg-zinc-900 " >
-            
-          </div>
-        </footer>
-      </section> */}
-      </div>
 
     </SmoothScrollWrapper>
   );

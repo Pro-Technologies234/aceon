@@ -28,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth " >
       <body
         className={`${cabinetGrotesk.variable} bg-gray-100 selection:bg-lime-200 selection:text-black font-cabinet-grotesk overflow-x-hidden antialiased`}
       >

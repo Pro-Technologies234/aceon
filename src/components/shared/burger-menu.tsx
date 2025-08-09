@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { Button } from "../ui/button"
 import { Ellipsis } from "lucide-react"
+import Link from "next/link"
 
 
 export function BurgerMenu() {
@@ -22,10 +23,10 @@ export function BurgerMenu() {
         <DropdownMenuContent align="end" className="w-[90dvw] space-y-1 md:w-80 rounded-2xl" >
             <DropdownMenuLabel>ACEON TENNIS BALLS</DropdownMenuLabel>
             <DropdownMenuSeparator />
-            <DropdownMenuItem className="text-2xl " >HOME</DropdownMenuItem>
-            <DropdownMenuItem className="text-2xl " >ABOUT US</DropdownMenuItem>
-            <DropdownMenuItem className="text-2xl " >WHY CHOOSE US</DropdownMenuItem>
-            <DropdownMenuItem className="text-2xl " >CONTACT</DropdownMenuItem>
+            <Link href={'#home'} ><DropdownMenuItem className="text-lg " >  HOME</DropdownMenuItem></Link>
+            <Link href={'#about_us'} ><DropdownMenuItem className="text-lg " >  ABOUT US</DropdownMenuItem></Link>
+            <Link href={'#why_choose_us'} ><DropdownMenuItem className="text-lg " >  WHY CHOOSE US</DropdownMenuItem></Link>
+            <Link href={'#contact'} ><DropdownMenuItem className="text-lg " >  CONTACT</DropdownMenuItem></Link>
         </DropdownMenuContent>
         </DropdownMenu>
     )
