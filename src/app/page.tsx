@@ -95,7 +95,7 @@ export default function Home() {
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.1 }}
               >
-                ACe
+                A
               </motion.span>
               <motion.span
                 initial={{ opacity: 0 }}
