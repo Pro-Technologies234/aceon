@@ -4,7 +4,7 @@ import { BurgerMenu } from "./burger-menu";
 
 export function Navbar() {
     return (
-        <header className="w-full z-10 font-cabinet-grotesk fixed left-0 py-10 md:py-15 not-lg:px-4 right-0" >
+        <header className="w-full z-10 font-cabinet-grotesk fixed left-0 py-10 md:py-15 px-4 right-0" >
             <div className="max-w-7xl  w-full flex justify-between m-auto" >
                 <h1 className="text-4xl text-white" >ACEON</h1>
                 <div className="flex gap-4 items-center" >

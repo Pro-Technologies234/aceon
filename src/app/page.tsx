@@ -21,20 +21,20 @@ export default function Home() {
     <SmoothScrollWrapper>
       <Navbar />
 
-      <section id='home' className="relative overflow-hidden   w-full h-dvh">
+      <section id='home' className="relative overflow-hidden w-full h-dvh">
         {/* Background Image Layer */}
         <div className="absolute inset-0 -z-10">
           <Image src={hereo_bg} alt="hero_bg" className="object-cover contrast-110 saturate-110 w-full h-full" />
         </div>
         {/* Gradient Overlay + Main Content */}
         <div className="absolute inset-0 bg-gradient-to-t from-cyan-700/25 to-cyan-500/5">
-          <div className="py-10 h-dvh flex font-cabinet-grotesk flex-col justify-end text-white w-full not-md:px-2 max-w-7xl mx-auto">
+          <div className="py-10 h-dvh font-semibold flex font-cabinet-grotesk flex-col justify-end text-white w-full px-4 max-w-7xl mx-auto">
             <div className="overflow-hidden" >
               <motion.h1
                 initial={{y: 100}}
                 animate={{y: 0}}
                 transition={{duration: 1}}
-                 className="text-3xl md:text-5xl md:w-xl selection:bg-lime-200 selection:text-black">
+                 className="text-3xl md:text-5xl md:w-xl  selection:bg-lime-200 selection:text-black">
                 The Perfect Tennis Ball for
               </motion.h1>
               </div>
@@ -61,7 +61,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="group w-full h-dvh bg-black/50 hover:bg-black/20 transition-all duration-500  overflow-hidden relative " >
+      <section className="group w-full h-dvh bg-black/50 hover:bg-black/20 transition-all duration-500 px-4 overflow-hidden relative " >
         <motion.div className='absolute overflow-hidden -z-20 inset-0'
           initial={{ opacity: 0, scale: 4 }}
           whileInView={{ opacity: 1, scale: 1 }} 
@@ -130,7 +130,7 @@ export default function Home() {
               <ArrowDown/>CONTINUE SCROLLING <ArrowDown/>
             </Button>
         </div>
-        <div className="grid not-md:grid-rows-2 md:grid-cols-2 py-20 h-dvh not-md:px-2  max-w-7xl w-full m-auto" >
+        <div className="grid not-md:grid-rows-2 md:grid-cols-2 py-20 h-dvh px-4  max-w-7xl w-full m-auto" >
           <motion.div
               // initial={{x: 400}}
               // whileInView={{x: 0}}
@@ -152,21 +152,20 @@ export default function Home() {
             </h3>
           </motion.div>
         </div>
-        <div>
-
+      </section>
+      <section className="px-4" >
+        <div className="flex justify-center items-center md:max-w-[90vw]  h-[75dvh] rounded-2xl md:rounded-4xl overflow-hidden relative py-50 text-white   m-auto" >
+          <div className="absolute inset-0  bg-black -z-1" >
+            <video src="/videos/tennis_ball_fall.mp4" autoPlay playsInline loop muted className="object-cover saturate-150 w-full opacity-20 h-full" ></video>
+          </div>
+            <h3 className="text-xl px-4 md:text-3xl text-center w-3xl uppercase  selection:bg-lime-200 selection:text-black " >
+              With years of research and collaboration with professional athletes, Aceon Balls are crafted to meet the highest standards of performance and sustainability.
+            </h3>
         </div>
-      <div className="flex justify-center items-center md:max-w-[90vw] w-[95vw] h-[75dvh] rounded-2xl md:rounded-4xl overflow-hidden relative py-50 text-white   m-auto" >
-        <div className="absolute inset-0  bg-black -z-1" >
-          <video src="/videos/tennis_ball_fall.mp4" autoPlay playsInline loop muted className="object-cover saturate-150 w-full opacity-20 h-full" ></video>
-        </div>
-          <h3 className="text-xl px-4 md:text-3xl text-center w-3xl uppercase  selection:bg-lime-200 selection:text-black " >
-            With years of research and collaboration with professional athletes, Aceon Balls are crafted to meet the highest standards of performance and sustainability.
-          </h3>
-      </div>
       </section>
       <div>
-  <section id='why_choose_us' className=" h-[150dvh] md:h-dvh z-1 py-2 grid not-md:grid-rows-2 md:grid-cols-2 items-center max-w-7xl not-md:px-2  m-auto w-full">
-    <div className="grid grid-rows-5 gap-2 md:w-150 h-120   " >
+  <section id='why_choose_us' className=" min-h-dvh z-1 py-2 grid not-md:grid-rows-2 md:grid-cols-2 items-center max-w-7xl px-4  m-auto w-full">
+    <div className="grid grid-rows-5 gap-2 md:w-150    " >
       <div className="group overflow-hidden row-span-3 relative rounded-xl md:rounded-3xl ">
         <Image
           src={tennis_racket}
@@ -227,19 +226,19 @@ export default function Home() {
             </div>
           </div>
       <span className="not-md:max-w-55 text-xs md:text-sm text-center" >Contact us or explore our collection of high-performance tennis balls.</span>
-      <h2 className="text-6xl md:text-9xl capitalize tracking-wider font-medium text-white md:w-2xl text-center" >
-        <span className="group relative " >
+      <h2 className="text-6xl sm:text-8xl md:text-9xl capitalize tracking-wider font-medium text-white md:max-w-6xl w-full text-center" >
           Let&apos;s work
-          <motion.div 
+          together!
+        <span className="group relative " >
+          {/* <motion.div 
             initial={{width:0}}
             whileInView={{width:650}}
             transition={{duration:.1, delay:0.1, ease:easeInOut}}
             className="absolute left-1 md:left-2 bottom-2 w-full not-sm:max-w-75 bg-white h-0.5 md:h-2 transition-all ease-out duration-300 " >
-          </motion.div>
+          </motion.div> */}
         </span  > 
         <span className="group relative " >
-          together!
-          <motion.div 
+          {/* <motion.div 
             initial={{width:0}}
             whileInView={{width:130}}
             transition={{duration:.1, delay:0.2, ease:easeInOut}}
@@ -250,7 +249,7 @@ export default function Home() {
             whileInView={{width:400}}
             transition={{duration:.1, delay:0.4, ease:easeInOut}}
             className="absolute left-25 md:left-55 bottom-2 not-md:max-w-42 md:bottom-4 w-full bg-white h-0.5 md:h-2 transition-all ease-out duration-300 " >
-          </motion.div>
+          </motion.div> */}
         </span  > 
         </h2>
         <Button size="lg" className="rounded-full z-1 bg-gray-50 p-6 px-8 hover:bg-blue-700 absolute bottom-8 text-black hover:text-white  ">
@@ -261,17 +260,17 @@ export default function Home() {
     {/* Footer Scrolls Over */}
     <footer className="absolute top-0 z-1 w-full h-[300vh] selection:bg-lime-200 selection:text-black">
       <div className="h-[150vh] -z-10" />
-      <div className="h-dvh bg-white px-2">
+      <div className="h-dvh bg-white px-4">
         <div className="max-w-7xl h-full w-full m-auto justify-between md:items-center z-10 flex-col flex md:grid  gap-y-8 md:grid-cols-6 md:gap-y-0">
 
           {/* Legal Info */}
-          <div className="flex flex-col h-full  col-span-2 p-6 not-md:text-center justify-end order-3 md:order-1">
+          <div className="flex flex-col h-full  col-span-2 py-6 not-md:text-center justify-end order-3 md:order-1">
             <h3>© 2025 Aceon Balls. All Rights Reserved.</h3>
             <h3 className="text-sm" >Terms & Conditions | Privacy Policy</h3>
           </div>
 
           {/* Social Links & Contact */}
-          <div className="font-medium not-md:flex w-full justify-between order-2 md:order-2 p-6">
+          <div className="font-medium not-md:flex w-full justify-between order-2 md:order-2 py-6">
             <div className="flex flex-col gap-4 text-xl">
               <Link href="#twitter">Twitter / X</Link>
               <Link href="#twitter">Instagram</Link>
@@ -287,7 +286,7 @@ export default function Home() {
           </div>
 
           {/* Newsletter */}
-          <div className="row-span-2 col-span-3 h-full py-6 justify-between flex flex-col order-1 md:order-3 p-6">
+          <div className="row-span-2 col-span-3 h-full py-6 justify-between flex flex-col order-1 md:order-3 py-6">
             <div className="h-10" />
             <div>
               <h3 className="text-5xl font-medium">Subscribe to <br /> our newsletter</h3>
