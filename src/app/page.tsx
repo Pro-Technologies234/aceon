@@ -226,7 +226,7 @@ export default function Home() {
             </div>
           </div>
       <span className="not-md:max-w-55 text-xs md:text-sm text-center" >Contact us or explore our collection of high-performance tennis balls.</span>
-      <h2 className="text-6xl sm:text-8xl md:text-9xl capitalize tracking-wider font-medium text-white md:max-w-6xl w-full text-center" >
+      <h2 className="text-6xl sm:text-8xl md:text-9xl uppercase tracking-wider font-medium text-white md:max-w-6xl w-full text-center" >
           Let&apos;s work
           together!
         <span className="group relative " >
@@ -306,13 +306,15 @@ export default function Home() {
 
         </div>
       </div>
-      <div className="h-[50dvh] bg-zinc-900 text-white flex flex-col not-md:items-center px-4 justify-between py-10">
-        <p className="text-4xl md:text-8xl font-light leading-tight md:w-2xl">ACEON TENNIS BALLS</p>
+      <div className="bg-zinc-900 not-sm:h-[50dvh] text-white flex flex-col not-md:items-center px-4 justify-between py-10">
+        <p className="text-6xl  md:text-8xl font-light leading-tight md:w-2xl">ACEON TENNIS BALLS</p>
         <div className='w-full flex justify-between text-white' >  
-          <Plus className=" animate-respin" />
-          <Plus className=" animate-respin" />
-          <Plus className=" animate-respin" />
-          <Plus className=" animate-respin" />
+          {
+            [1,1,1,1,1].map((i)=>(
+
+              <Plus className="animate-respin" />
+            ))
+          }
         </div>
       </div>
     </footer>
