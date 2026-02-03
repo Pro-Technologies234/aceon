@@ -8,7 +8,7 @@ import { Navbar } from "@/components/shared/navbar";
 import { Button } from "@/components/ui/button";
 import SmoothScrollWrapper from "@/components/scroll-wrap";
 // import { ScrollLockScaling } from "@/components/shared/animated-scaled-text";
-import { circIn, circInOut, easeInOut, motion } from "motion/react";
+import { circInOut, motion } from "framer-motion";
 import { ArrowDown, ArrowRight, ArrowUp, Plus } from "lucide-react";
 import tennis_racket from '@/assets/images/tennis_racket.jpg'
 import tennis_strike from '@/assets/images/tennis_strike.jpg'
@@ -26,14 +26,33 @@ export default function Home() {
         <div className="absolute inset-0 -z-10">
           <Image src={hereo_bg} alt="hero_bg" className="object-cover contrast-110 saturate-110 w-full h-full" />
         </div>
+        <motion.div
+          aria-hidden="true"
+          className="absolute inset-0 -z-10"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          <div className="absolute -left-40 top-10 h-40 w-[75vw] -skew-x-12 bg-lime-300/15 blur-3xl" />
+          <div className="absolute -right-32 top-28 h-32 w-[60vw] -skew-x-12 bg-cyan-400/20 blur-2xl" />
+          <div className="absolute left-12 bottom-12 h-24 w-[55vw] -skew-x-12 bg-emerald-300/15 blur-2xl" />
+        </motion.div>
         {/* Gradient Overlay + Main Content */}
         <div className="absolute inset-0 bg-gradient-to-t from-cyan-700/25 to-cyan-500/5">
           <div className="py-10 h-dvh font-semibold flex font-cabinet-grotesk flex-col justify-end text-white w-full px-4 max-w-7xl mx-auto">
+            <motion.span
+              className="uppercase tracking-[0.4em] text-xs md:text-sm text-lime-200 font-light"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+            >
+              Match Day Ready
+            </motion.span>
             <div className="overflow-hidden" >
               <motion.h1
                 initial={{y: 100}}
                 animate={{y: 0}}
-                transition={{duration: 1}}
+                transition={{duration: 1, ease: circInOut}}
                  className="text-3xl md:text-5xl md:w-xl  selection:bg-lime-200 selection:text-black">
                 The Perfect Tennis Ball for
               </motion.h1>
@@ -42,21 +61,46 @@ export default function Home() {
               <motion.h1
                 initial={{y: 100}}
                 animate={{y: 0}}
-                transition={{duration: 1}}
+                transition={{duration: 1, ease: circInOut}}
                  className="text-3xl md:text-5xl md:w-xl selection:bg-lime-200 selection:text-black">
                  Every Match.
               </motion.h1>
             </div>
-            <p className=" md:w-md text-xs md:text-sm font-light mt-2">
+            <motion.p
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className=" md:w-md text-xs md:text-sm font-light mt-2"
+            >
               Aceon Balls are trusted by players of all levels, from casual enthusiasts to tournament champions.
-            </p>
+            </motion.p>
+            <motion.div
+              className="mt-3 text-sm md:text-base font-semibold uppercase tracking-[0.3em] text-lime-100"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.25 }}
+            >
+              Spin. Speed. Control.
+            </motion.div>
             <div className="space-x-4 mt-4">
-              <Button size="lg" className="rounded-full bg-gray-900 hover:bg-blue-700 text-white">
-                SHOP NOW
-              </Button>
-              <Button size="lg" className="rounded-full bg-gray-900/10 hover:bg-gray-900/50 backdrop-blur-sm text-white">
-                LEARN MORE
-              </Button>
+              <motion.div
+                className="inline-flex"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <Button size="lg" className="rounded-full bg-gray-900 hover:bg-blue-700 text-white">
+                  SHOP NOW
+                </Button>
+              </motion.div>
+              <motion.div
+                className="inline-flex"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <Button size="lg" className="rounded-full bg-gray-900/10 hover:bg-gray-900/50 backdrop-blur-sm text-white">
+                  LEARN MORE
+                </Button>
+              </motion.div>
             </div>
           </div>
         </div>
@@ -154,19 +198,28 @@ export default function Home() {
         </div>
       </section>
       <section className="px-4" >
-        <div className="flex justify-center items-center md:max-w-[90vw]  h-[75dvh] rounded-2xl md:rounded-4xl overflow-hidden relative py-50 text-white   m-auto" >
+        <motion.div
+          className="flex justify-center items-center md:max-w-[90vw]  h-[75dvh] rounded-2xl md:rounded-4xl overflow-hidden relative py-50 text-white   m-auto"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9 }}
+        >
           <div className="absolute inset-0  bg-black -z-1" >
             <video src="/videos/tennis_ball_fall.mp4" autoPlay playsInline loop muted className="object-cover saturate-150 w-full opacity-20 h-full" ></video>
           </div>
             <h3 className="text-xl px-4 md:text-3xl text-center w-3xl uppercase  selection:bg-lime-200 selection:text-black " >
               With years of research and collaboration with professional athletes, Aceon Balls are crafted to meet the highest standards of performance and sustainability.
             </h3>
-        </div>
+        </motion.div>
       </section>
       <div>
   <section id='why_choose_us' className=" min-h-dvh z-1 py-2 grid not-md:grid-rows-2 md:grid-cols-2 items-center max-w-7xl px-4  m-auto w-full">
     <div className="grid grid-rows-5 gap-2 md:w-150    " >
-      <div className="group overflow-hidden row-span-3 relative rounded-xl md:rounded-3xl ">
+      <motion.div
+        className="group overflow-hidden row-span-3 relative rounded-xl md:rounded-3xl "
+        whileHover={{ scale: 1.02 }}
+        transition={{ type: "spring", stiffness: 200, damping: 20 }}
+      >
         <Image
           src={tennis_racket}
           alt="tennis_racket.jpg"
@@ -175,9 +228,13 @@ export default function Home() {
           <Button size={'icon'} className="group-hover:bg-blue-700 group-hover:p-5 group-hover:text-white absolute bottom-4   right-4 rounded-full bg-white hover:bg-white  text-black"  >
             <Plus/>
           </Button>
-      </div>
+      </motion.div>
       <div className="grid grid-cols-2 row-span-2 gap-2" >        
-        <div className="group overflow-hidden relative rounded-xl md:rounded-3xl ">
+        <motion.div
+          className="group overflow-hidden relative rounded-xl md:rounded-3xl "
+          whileHover={{ scale: 1.03 }}
+          transition={{ type: "spring", stiffness: 200, damping: 18 }}
+        >
           <Button size={'icon'} className="group-hover:bg-blue-700 group-hover:p-5 group-hover:text-white absolute bottom-4   right-4 rounded-full bg-white hover:bg-white  text-black"  >
             <Plus/>
           </Button>
@@ -186,9 +243,13 @@ export default function Home() {
             alt="tennis_racket.jpg"
             className="object-cover w-full h-full"
           />
-        </div>
+        </motion.div>
         
-        <div className="group overflow-hidden relative rounded-xl md:rounded-3xl ">
+        <motion.div
+          className="group overflow-hidden relative rounded-xl md:rounded-3xl "
+          whileHover={{ scale: 1.03 }}
+          transition={{ type: "spring", stiffness: 200, damping: 18 }}
+        >
           <Button size={'icon'} className="group-hover:bg-blue-700 group-hover:p-5 group-hover:text-white absolute bottom-4   right-4 rounded-full bg-white hover:bg-white  text-black"  >
             <Plus/>
           </Button>
@@ -197,7 +258,7 @@ export default function Home() {
             alt="tennis_racket.jpg"
             className="object-cover w-full h-full"
           />
-        </div>
+        </motion.div>
       </div>
     </div>
     <div className="flex flex-col items-end">
